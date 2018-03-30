@@ -8,6 +8,14 @@ import com.facebook.react.views.view.ReactViewGroup;
 public class TouchThroughView extends ReactViewGroup {
   public TouchThroughView(Context context) {
     super(context);
+    setClickable(false);
+    setFocusable(false);
+    setFocusableInTouchMode(false);
+  }
+
+  @Override
+  public boolean callOnClick() {
+    return false;
   }
 
   @Override
